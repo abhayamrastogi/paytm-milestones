@@ -1,0 +1,1 @@
+kafka-server-start.sh /Users/abhayam.rastogi/Documents/kafka/config/server.properties
