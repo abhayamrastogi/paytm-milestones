@@ -10,6 +10,7 @@ com/example/milestone1/repository/PractitionerRepository.class
 com/example/milestone1/constants/ResponseCode.class
 com/example/milestone1/model/Education.class
 com/example/milestone1/common/exception/BaseException.class
+com/example/milestone1/model/User.class
 com/example/milestone1/common/BaseResponse$Builder.class
 com/example/milestone1/error/UserAlreadyExistException.class
 com/example/milestone1/model/BaseResponse.class

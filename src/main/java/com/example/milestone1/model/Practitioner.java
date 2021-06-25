@@ -9,12 +9,8 @@ import java.util.Set;
 
 @Entity
 @Table(name = "practitioner")
-public class Practitioner {
-    @Id
+public class Practitioner extends User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-    @Column(name = "id")
-    private Long ID;
 
     @Column(name = "first_name")
     private String first_name;
@@ -43,25 +39,6 @@ public class Practitioner {
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "practitioner_id", referencedColumnName = "id")
     private List<Education> educations;
-
-    public Practitioner(){
-    }
-
-    public Practitioner(Long ID, String first_name, String last_name, String user_name, String mobile_number, String email_id, String address1, String address2, List<Education> educations) {
-        this.ID = ID;
-        this.first_name = first_name;
-        this.last_name = last_name;
-        this.user_name = user_name;
-        this.mobile_number = mobile_number;
-        this.email_id = email_id;
-        this.address1 = address1;
-        this.address2 = address2;
-        this.educations = educations;
-    }
-
-    public Long getID() {
-        return ID;
-    }
 
     public String getFirst_name() {
         return first_name;
@@ -93,10 +70,6 @@ public class Practitioner {
 
     public List<Education> getEducations() {
         return educations;
-    }
-
-    public void setID(Long ID) {
-        this.ID = ID;
     }
 
     public void setFirst_name(String first_name) {
