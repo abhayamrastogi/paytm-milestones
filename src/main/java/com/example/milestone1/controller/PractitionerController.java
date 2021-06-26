@@ -7,6 +7,7 @@ import com.example.milestone1.error.UserNotFoundException;
 import com.example.milestone1.model.Education;
 import com.example.milestone1.model.Practitioner;
 import com.example.milestone1.service.EducationService;
+import com.example.milestone1.service.KafkaProducerService;
 import com.example.milestone1.service.PractitionerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -20,16 +21,23 @@ public class PractitionerController extends BaseController {
 
     private PractitionerService practitionerService;
     private EducationService educationService;
+    private final KafkaProducerService producerService;
 
     @Autowired
-    public PractitionerController(PractitionerService practitionerService, EducationService educationService) {
+    public PractitionerController(PractitionerService practitionerService, EducationService educationService, KafkaProducerService producerService) {
         this.practitionerService = practitionerService;
         this.educationService = educationService;
+        this.producerService = producerService;
     }
 
     @GetMapping
     public List<Practitioner> getAllPractitioners() {
         return  practitionerService.getAllPractitioners();
+    }
+
+    @PostMapping(value = "/publish")
+    public void sendMessageToKafkaTopic(@RequestParam("message") String message) {
+        this.producerService.sendMessage(message);
     }
 
     @PostMapping
@@ -42,6 +50,7 @@ public class PractitionerController extends BaseController {
 
         ResponseEntity<Practitioner> response = ResponseEntity.ok(practitioner);
         practitionerService.addPractitioner(practitioner);
+        producerService.saveCreatedPractitionerLog(practitioner);
         return response;
     }
 

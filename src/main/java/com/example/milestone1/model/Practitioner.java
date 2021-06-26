@@ -40,6 +40,13 @@ public class Practitioner extends User {
     @JoinColumn(name = "practitioner_id", referencedColumnName = "id")
     private List<Education> educations;
 
+    public  Practitioner(){}
+
+    @Override
+    public String toString() {
+        return first_name + ", " + last_name + "!";
+    }
+
     public String getFirst_name() {
         return first_name;
     }
@@ -103,4 +110,5 @@ public class Practitioner extends User {
     public void setEducations(List<Education> educations) {
         this.educations = educations;
     }
+
 }

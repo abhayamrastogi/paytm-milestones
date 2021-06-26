@@ -1,0 +1,47 @@
+[
+  {
+  "first_name": "Abhayam",
+  "last_name": "Rastogi",
+  "user_name": "abhayam.rastogi",
+  "mobile_number": "9911928961",
+  "email_id": "abhayam.rastogi17@gmail.com",
+  "address1": "D-62",
+  "address2": "Sector-9",
+  "educations": [
+    {
+      "degree": "MBBS",
+      "name": "Indian Medical College"
+    }
+  ]
+  },
+  {
+    "first_name": "Abhayam1",
+    "last_name": "Rastogi1",
+    "user_name": "abhayam1.rastogi1",
+    "mobile_number": "+919911928961",
+    "email_id": "abhayam.rastogi@gmail.com",
+    "address1": "D-62",
+    "address2": "Sector-9",
+    "educations": [
+      {
+        "degree": "MBBSs",
+        "name": "Medical College"
+      }
+    ]
+  },
+  {
+    "first_name": "Tushar",
+    "last_name": "Saxena",
+    "user_name": "tushar.saxena",
+    "mobile_number": "993434241334",
+    "email_id": "tushar.saxena@gmail.com",
+    "address1": "D-62",
+    "address2": "Sector-9",
+    "educations": [
+      {
+        "degree": "Medical",
+        "name": "Indian College"
+      }
+    ]
+  }
+]
