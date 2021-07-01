@@ -1,7 +1,6 @@
 package com.example.milestone1.service;
 
-import com.example.milestone1.constants.AppConstants;
-import com.example.milestone1.model.Practitioner;
+import com.example.milestone1.entity.Practitioner;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;

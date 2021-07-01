@@ -1,7 +1,7 @@
 package com.example.milestone1.kafka;
 
 
-import com.example.milestone1.model.Practitioner;
+import com.example.milestone1.entity.Practitioner;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.kafka.support.serializer.JsonDeserializer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
@@ -35,8 +35,9 @@ public class KafkaConsumerConfig {
         props.put(ConsumerConfig.GROUP_ID_CONFIG, groupId);
         props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
+        props.put(JsonDeserializer.TRUSTED_PACKAGES, "*");
 
-        return new DefaultKafkaConsumerFactory<>(props);
+        return new DefaultKafkaConsumerFactory<String, String>(props, new StringDeserializer(), new StringDeserializer());
     }
 
     @Bean
@@ -51,7 +52,9 @@ public class KafkaConsumerConfig {
         Map<String, Object> props = new HashMap<>();
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapAddress);
         props.put(ConsumerConfig.GROUP_ID_CONFIG, practitionerGroupId);
-        return new DefaultKafkaConsumerFactory(props,
+        props.put(JsonDeserializer.TRUSTED_PACKAGES, "*");
+
+        return new DefaultKafkaConsumerFactory<String, Practitioner>(props,
                 new StringDeserializer(),
                 new JsonDeserializer());
     }

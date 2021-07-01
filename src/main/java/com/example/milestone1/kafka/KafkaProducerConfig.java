@@ -1,6 +1,6 @@
 package com.example.milestone1.kafka;
 
-import com.example.milestone1.model.Practitioner;
+import com.example.milestone1.entity.Practitioner;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.beans.factory.annotation.Value;

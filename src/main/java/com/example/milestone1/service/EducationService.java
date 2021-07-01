@@ -1,13 +1,12 @@
 package com.example.milestone1.service;
 
-import com.example.milestone1.model.Education;
-import com.example.milestone1.model.Practitioner;
+import com.example.milestone1.entity.Education;
+import com.example.milestone1.entity.Practitioner;
 import com.example.milestone1.repository.EducationRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 
 @Service
 public class EducationService {

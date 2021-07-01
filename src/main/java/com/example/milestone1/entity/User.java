@@ -1,12 +1,13 @@
-package com.example.milestone1.model;
+package com.example.milestone1.entity;
 
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
+import java.io.Serializable;
 
 @MappedSuperclass
-public abstract class User {
+public abstract class User implements Serializable {
     @Id
     @GeneratedValue
 

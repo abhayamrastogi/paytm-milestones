@@ -1,6 +1,6 @@
 package com.example.milestone1.service;
 
-import com.example.milestone1.model.Practitioner;
+import com.example.milestone1.entity.Practitioner;
 import com.example.milestone1.repository.PractitionerRepository;
 import org.springframework.stereotype.Service;
 

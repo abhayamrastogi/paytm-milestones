@@ -1,11 +1,9 @@
-package com.example.milestone1.model;
+package com.example.milestone1.entity;
 
-import com.example.milestone1.controller.PractitionerController;
 import org.springframework.lang.NonNull;
 
 import javax.persistence.*;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table(name = "practitioner")
