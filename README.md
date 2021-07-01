@@ -27,7 +27,8 @@ mvn clean install
  
 # UML Diagrams
 - ```spring-boot basic app layer``` [https://drive.google.com/file/d/1BA8TU01ErYseqTGtlHM--r71jX6IAfrh/view?usp=sharing]
-- ```UML``` [https://drive.google.com/file/d/15MXxnObtgPBEVtUsmvuv_baT0rVbHT_q/view?usp=sharing]
+- ```User/Practitioner``` [https://drive.google.com/file/d/15MXxnObtgPBEVtUsmvuv_baT0rVbHT_q/view?usp=sharing]
+- ```Paytm-Wallet```[https://drive.google.com/file/d/1CM1LbyN6tqLnk9umGWYnxJSgJmXMMylL/view?usp=sharing]
 
 # Links
 - Baeldung [https://www.baeldung.com/spring-boot]
